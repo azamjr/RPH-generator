@@ -1,0 +1,30 @@
+[
+  {
+    "file": "Versi_BI_DOKUMEN_PENJAJARAN_KSSR_MATEMATIK_TAHAP_I_VERSI_BAHASA.pdf",
+    "sha256": "04ed6ad627703460176eb224e0f10b0736beae12e721f1551188fc4cfe6c701c",
+    "pages": 63,
+    "language": "English",
+    "status": "extracted; review against source required"
+  },
+  {
+    "file": "DSKP KSSR Mathematics Year 4 (Semakan).pdf",
+    "sha256": "bd5ec82230cb9639066bfb1475b7b178eede2edbc9b247f3e93682e89c21fb74",
+    "pages": 88,
+    "language": "English",
+    "status": "extracted; review against source required"
+  },
+  {
+    "file": "DSKP KSSR Mathematics Year 5 (Semakan).pdf",
+    "sha256": "8549b1587d93df423506aae6d4048c0e41393722b842745894b0ec4d9a41db68",
+    "pages": 82,
+    "language": "English",
+    "status": "extracted; review against source required"
+  },
+  {
+    "file": "DSKP KSSR Mathematics Year 6 (Semakan 2017).pdf",
+    "sha256": "1f12bf29049e0a4c5a179112a85927a9dda1951187de87fdb50584382ea8faeb",
+    "pages": 80,
+    "language": "English",
+    "status": "extracted; review against source required"
+  }
+]
