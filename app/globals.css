@@ -19,3 +19,28 @@
 .aid-list legend{font-weight:650;background:white;padding:2px 6px}
 .aid-list label{display:flex;gap:10px;align-items:center;padding:8px 0;cursor:pointer}
 .aid-list small{display:block}
+
+.drawer-close{display:none}
+@media(max-width:760px){
+  .sidebar{visibility:hidden;overflow-y:auto;overscroll-behavior:contain;padding-bottom:12px}
+  .sidebar.mobile-open{visibility:visible}
+  .drawer-close{display:block;position:absolute;top:8px;right:8px;min-width:44px;min-height:44px;background:transparent;border:0;color:white}
+  .topbar{height:auto;min-height:62px;flex-wrap:wrap;padding:8px 12px;gap:4px}
+  .topbar-right{flex-wrap:wrap}
+  .mobile-menu,.steps button,.document-tabs button,.button,.nav-item{min-height:44px}
+  .builder-main,.form-card,.table-toolbar,.field,.document-sheet{min-width:0}
+  .aid-list{min-inline-size:0}
+  .aid-list input:not([type=radio]):not([type=checkbox]){width:100%}
+  .field input,.field select,.field textarea,.search-field input,.aid-list input[type=text]{font-size:16px;max-width:100%;min-width:0}
+  .aid-list label,.sp-option,.sk-label{min-height:44px}
+  .document-tabs,.table-toolbar{flex-wrap:wrap;gap:8px}
+  .modal{max-height:90dvh;overflow-y:auto}
+}
+@media(max-width:520px){
+  .form-grid,.tier-grid{grid-template-columns:minmax(0,1fr)}
+  .tier-card p{min-height:0}
+  .topbar .breadcrumb strong{display:none}
+  .form-title p,.sp-option,.sk-label,.field>span{font-size:14px}
+  .table-toolbar .search-field{flex:1 1 100%}
+  .form-actions,.export-buttons{flex-wrap:wrap}
+}

@@ -83,3 +83,9 @@ At quota exhaustion, affected generation/saving pauses. Existing editing and loc
 ## Source and license notes
 
 Preserve the included third-party license files. This repository does not claim ownership of the KPM curriculum documents or official approval of generated lessons. A teacher must review mathematics, curriculum alignment and classroom suitability before use.
+
+### Publish the public planner on Cloudflare Workers
+
+Use Node 22.13 or newer. Run `npm ci`, then `npx wrangler login` and `npm run deploy:cloudflare`. Wrangler prints the public workers.dev URL. In Cloudflare Workers Builds, connect this repository, use the repository root and set the deploy command to `npm run deploy:cloudflare` (it includes the build).
+
+The Worker serves the public planner and its assets. Sign in with ChatGPT opens the existing personal workspace on chatgpt.site, which owns the D1 records and Gemini configuration. A second database or API key is unnecessary for this deployment.
