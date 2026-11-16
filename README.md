@@ -1,6 +1,6 @@
 # RPH Studio
 
-A private pilot webapp for Malaysian primary Mathematics teachers, built for Tahun 1–6. Teachers select SK/SP from their supplied curriculum PDFs, prepare a lesson, edit individual sections, and export RPHs, differentiated worksheets and teacher answer keys.
+A public pilot webapp for Malaysian primary Mathematics teachers, built for Tahun 1–6. Teachers select SK/SP from their supplied curriculum PDFs, prepare a lesson, edit individual sections, and export RPHs, differentiated worksheets and teacher answer keys.
 
 ## What works
 
@@ -16,11 +16,11 @@ A private pilot webapp for Malaysian primary Mathematics teachers, built for Tah
 
 **A working editor is not the same as enabled AI.** The arithmetic sample is a fixed addition example. It is prominently labelled in the app and exported files and must not be treated as aligned to arbitrary selected SP. It works without provider credentials.
 
-Live AI needs `GEMINI_API_KEY` and `GEMINI_FREE_TIER_CONFIRMED=true` configured as hosted runtime secrets. Only confirm the latter after checking that the Google project is on the free tier with billing disabled. The app cannot verify Google billing status. No paid failover or automatic upgrade exists. The adapter uses `gemini-2.5-flash-lite`; verify current model availability before activation. Failed attempts count conservatively toward application limits.
+Live AI needs `GEMINI_API_KEY` and `GEMINI_FREE_TIER_CONFIRMED=true` configured as hosted runtime secrets. Only confirm the latter after checking that the Google project is on the free tier with billing disabled. The app cannot verify Google billing status. No paid failover or automatic upgrade exists. The adapter uses `gemini-3.5-flash-lite`; verify current model availability before activation. Failed attempts count conservatively toward application limits.
 
 The pilot uses the hosting platform's **ChatGPT identity**. This does **not** connect a teacher's ChatGPT subscription for inference. Google/email login and ChatGPT-plan generation remain pending supported integrations and eligibility checks; they are honestly shown as pending. Do not bypass this with stored ChatGPT passwords or session cookies.
 
-The initial deployment is **owner-private**, not a publicly open or already-invited school workspace. Access policy changes need to be configured separately before inviting pilot teachers.
+Visitors can open the public planner. Sign in with ChatGPT to save personal plans and request AI generation when configured.
 
 The original curriculum is English. BM lesson activities can be generated, but the curriculum statements stay in their source language. No unofficial translation is presented as exact KPM text. Extraction preserves source peculiarities and may lose superscript formatting; review cited pages before relying on a standard. Worksheet level does not assign a PBD TP.
 
