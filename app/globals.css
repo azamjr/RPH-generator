@@ -55,3 +55,13 @@
 .reuse-details input{padding:9px;border:1px solid #ccd5cc;border-radius:4px;max-width:100%;font-size:16px}
 .modal textarea{width:100%;min-height:180px;font-size:14px}
 @media(max-width:760px){.planner-section>summary{font-size:18px}.form-actions .button{flex:1 1 auto}.planner-section{padding:18px 14px}.reuse-details label{max-width:100%}}
+
+.standards-picker{width:min(760px,100%);max-height:90dvh;overflow:auto}
+.standards-picker .standard-list{max-height:42dvh}
+.chosen-standards{padding-inline-start:20px;font-size:14px}
+.chosen-standards li{margin-block:8px}
+.choice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:4px 12px}
+.rph-search-dates{display:flex;gap:12px;flex-wrap:wrap;align-items:end;flex-basis:100%}
+.rph-search-dates label,.prompt-scope{display:grid;gap:5px;font-size:13px}
+.rph-search-dates input,.rph-search-dates select,.prompt-scope select{min-height:38px;border:1px solid #ccd5cc;border-radius:4px;padding:5px;background:white;color:inherit}
+.table-toolbar{flex-wrap:wrap}
