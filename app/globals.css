@@ -65,3 +65,5 @@
 .rph-search-dates label,.prompt-scope{display:grid;gap:5px;font-size:13px}
 .rph-search-dates input,.rph-search-dates select,.prompt-scope select{min-height:38px;border:1px solid #ccd5cc;border-radius:4px;padding:5px;background:white;color:inherit}
 .table-toolbar{flex-wrap:wrap}
+
+.reuse-details select{padding:9px;border:1px solid #ccd5cc;border-radius:4px;max-width:100%;font-size:16px;background:white;color:inherit}

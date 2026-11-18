@@ -16,14 +16,14 @@ export function lessonPrompt(input: Intake, standards: Standard[], section?: str
   ].join('\n\n');
 }
 
-export function resetReflection(content: Content, pupils: number, language: Intake['language']): Content {
+export function resetReflection(content: Content, pupils: number | undefined, language: Intake['language']): Content {
   return {
     ...content,
     sections: content.sections.map(section => section.id === 'reflection' ? {
       ...section,
       text: language === 'BM'
-        ? `___ / ${pupils} murid mencapai objektif.\nTindakan susulan: ____________________`
-        : `___ / ${pupils} pupils achieved the objectives.\nFollow-up: ____________________`
+        ? `___ / ${pupils??'___'} murid mencapai objektif.\nTindakan susulan: ____________________`
+        : `___ / ${pupils??'___'} pupils achieved the objectives.\nFollow-up: ____________________`
     } : section)
   };
 }
