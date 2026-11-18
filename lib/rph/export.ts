@@ -5,8 +5,9 @@ export function exportBlocks(lesson:Lesson,template:Template,part:ExportPart):Bl
  const en=lesson.intake.language==='EN';const blocks:Block[]=[];
  if(lesson.mode==='sample')blocks.push({heading:en?'ARITHMETIC SAMPLE — NOT ALIGNED TO SELECTED SP':'CONTOH OPERASI ASAS — BELUM DIJAJARKAN KEPADA SP'});
  if(part==='lesson'||part==='all'){
- blocks.push({heading:en?'DAILY LESSON PLAN · MATHEMATICS':'RANCANGAN PENGAJARAN HARIAN · MATEMATIK'},{heading:lesson.content.title},{text:`${en?'Class':'Kelas'}: ${lesson.intake.className} | ${en?'Year':'Tahun'} ${lesson.intake.year}\n${en?'Date':'Tarikh'}: ${lesson.intake.date}${lesson.intake.startTime?' '+lesson.intake.startTime:''} | ${lesson.intake.duration} ${en?'minutes':'minit'} | ${lesson.intake.pupils} ${en?'pupils':'murid'}`});
- blocks.push({heading:en?'Curriculum references (English source text)':'Rujukan kurikulum (teks sumber Bahasa Inggeris)'});
+ blocks.push({heading:`${en?'DAILY LESSON PLAN':'RANCANGAN PENGAJARAN HARIAN'} · ${(lesson.intake.subject??(en?'Mathematics':'Matematik')).toUpperCase()}`},{heading:lesson.content.title},{text:`${lesson.intake.className?`${en?'Class':'Kelas'}: ${lesson.intake.className} | `:''}${en?'Year':'Tahun'} ${lesson.intake.year}\n${en?'Date':'Tarikh'}: ${lesson.intake.date}${lesson.intake.startTime?' '+lesson.intake.startTime:''} | ${lesson.intake.duration} ${en?'minutes':'minit'} | ${lesson.intake.pupils} ${en?'pupils':'murid'}`});
+ if(lesson.intake.customStandards)blocks.push({heading:'SK/SP',text:lesson.intake.customStandards});
+ if(lesson.standards.length)blocks.push({heading:en?'Curriculum references (English source text)':'Rujukan kurikulum (teks sumber Bahasa Inggeris)'});
  lesson.standards.forEach(s=>blocks.push({text:`SK ${s.sk}: ${s.skText}\nSP ${s.sp}: ${s.text}\n${s.source}, PDF p. ${s.page}. Status: extracted; teacher review required.`}));
  lesson.content.sections.filter(s=>!template.hidden.includes(s.id)).forEach(s=>blocks.push({heading:`${template.headings[s.id]||s.title}${s.minutes?` (${s.minutes} ${en?'min':'minit'})`:''}`,text:s.text}));
  }

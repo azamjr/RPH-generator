@@ -7,6 +7,7 @@ import { correctArithmetic,qualityCheck,distributeMinutes } from '../../../lib/r
 import { identity,readJson,failure,ApiError } from '../../../lib/server';
 export async function POST(request:Request){try{
  const user=await identity(request);const data=z.object({intake:intakeSchema,mode:z.enum(['sample','ai']),consent:z.boolean().default(false),section:z.string().max(60).optional(),previous:contentSchema.optional(),variant:z.number().int().min(0).max(100).default(0)}).parse(await readJson(request));
+ if(data.intake.subject&&data.intake.subject!=='Mathematics')throw new ApiError('Direct generation currently supports Mathematics. Use Copy AI Prompt for other subjects.');
  const standards=data.intake.standardIds.map(id=>(curriculum as Standard[]).find(s=>s.id===id));if(standards.some(s=>!s||s.year!==data.intake.year))throw new ApiError('Choose valid standards for this year.');const selected=standards as Standard[];
  let content=sampleContent(data.intake,selected,data.variant);let corrections:string[]=[];
  if(data.mode==='ai'){
