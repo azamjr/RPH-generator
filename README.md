@@ -8,7 +8,7 @@ A public pilot webapp for Malaysian primary Mathematics teachers, built for Tahu
 - Curriculum browser containing **325 extracted SP** across Tahun 1–6 with source filename and PDF page references. Original statements are English; all entries remain **extracted, pending human review**.
 - Section editor, teacher-confirmed section regeneration, worksheet/answer editing, safe arithmetic checks and blank post-lesson reflection.
 - On-demand `.docx` and PDF downloads: complete pack, lesson only, pupil worksheets without answers, or teacher answer key.
-- Private cloud records, class profiles, template preferences, lesson duplication and up to 30 versions per lesson. Database requests are scoped to the authenticated user. Concurrent saves use revision checks.
+- User-scoped records, class profiles, template preferences, lesson duplication and up to 30 versions per lesson. Concurrent saves use revision checks. Self-hosted copies store data in local D1; the hosted pilot uses its configured D1 database.
 - Responsive desktop-first workspace.
 - Optional Sign in with ChatGPT plan usage for locally run, open-source installations. Each teacher authorizes their own account; the app does not use a shared API key or quota.
 
